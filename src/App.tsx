@@ -1,4 +1,4 @@
-import { GitHubBanner, Refine, WelcomePage } from "@refinedev/core";
+import { Refine } from "@refinedev/core";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
 import { notificationProvider, RefineThemes } from "@refinedev/mantine";
@@ -16,9 +16,13 @@ import routerBindings, {
 } from "@refinedev/react-router-v6";
 import { DataProvider } from "@refinedev/strapi-v4";
 import { useTranslation } from "react-i18next";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { authProvider, axiosInstance } from "./authProvider";
 import { API_URL } from "./constants";
+import { Home } from "./pages/home";
+import { ArticleList } from "./pages/articles/list";
+import { ArticleShow } from "./pages/articles/show";
+import { Layout } from "./components/layout";
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -39,7 +43,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <GitHubBanner />
       <RefineKbarProvider>
         <ColorSchemeProvider
           colorScheme={colorScheme}
@@ -55,7 +58,7 @@ function App() {
             <NotificationsProvider position="top-right">
               <Refine
                 authProvider={authProvider}
-                dataProvider={DataProvider(API_URL + `/api`, axiosInstance)}
+                dataProvider={DataProvider(API_URL, axiosInstance)}
                 notificationProvider={notificationProvider}
                 routerProvider={routerBindings}
                 i18nProvider={i18nProvider}
@@ -63,10 +66,30 @@ function App() {
                   syncWithLocation: true,
                   warnWhenUnsavedChanges: true,
                 }}
+                resources={[
+                  {
+                    name: "articles",
+                    list: "/articles",
+                    show: "/articles/:slug",
+                  },
+                ]}
               >
                 <Routes>
-                  <Route index element={<WelcomePage />} />
+                  <Route
+                    element={
+                      <Layout>
+                        <Outlet />
+                      </Layout>
+                    }
+                  >
+                    <Route index element={<Home />} />
+                    <Route path="articles">
+                      <Route index element={<ArticleList />} />
+                      <Route path=":slug" element={<ArticleShow />} />
+                    </Route>
+                  </Route>
                 </Routes>
+
                 <RefineKbar />
                 <UnsavedChangesNotifier />
               </Refine>

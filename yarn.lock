@@ -437,6 +437,13 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.9.1.tgz#4ffb0055f7ef676ebc3a5a91fb621393294e2f43"
   integrity sha512-gJB6HLm5rYwSLI6PQa+X1t5CFGrv1J1TWG+sOyMCeKz2ojaj6Fnl/rZEspogG+cvqbt4AE/2eIyD2QfLKTBNlQ==
 
+"@emotion/is-prop-valid@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-1.2.1.tgz#23116cf1ed18bfeac910ec6436561ecb1a3885cc"
+  integrity sha512-61Mf7Ufx4aDxx1xlDeOm8aFFigGHE4z+0sKCa+IHCeZKiyP9RLD0Mmx7m8b9/Cf37f7NAvQOOJAbQQGVr5uERw==
+  dependencies:
+    "@emotion/memoize" "^0.8.1"
+
 "@emotion/memoize@^0.8.1":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.8.1.tgz#c1ddb040429c6d21d38cc945fe75c818cfb68e17"
@@ -471,6 +478,18 @@
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.2.2.tgz#d58e788ee27267a14342303e1abb3d508b6d0fec"
   integrity sha512-0QBtGvaqtWi+nx6doRwDdBIzhNdZrXUppvTM4dtZZWEGTXL/XE/yJxLMGlDT1Gt+UHH5IX1n+jkXyytE/av7OA==
+
+"@emotion/styled@^11.11.0":
+  version "11.11.0"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.11.0.tgz#26b75e1b5a1b7a629d7c0a8b708fbf5a9cdce346"
+  integrity sha512-hM5Nnvu9P3midq5aaXj4I+lnSfNi7Pmd4EWk1fOZ3pxookaQTNew6bp4JaCBYM4HVFZF9g7UjJmsUmC2JlxOng==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    "@emotion/babel-plugin" "^11.11.0"
+    "@emotion/is-prop-valid" "^1.2.1"
+    "@emotion/serialize" "^1.1.2"
+    "@emotion/use-insertion-effect-with-fallbacks" "^1.0.1"
+    "@emotion/utils" "^1.2.1"
 
 "@emotion/unitless@^0.8.1":
   version "0.8.1"
@@ -718,6 +737,13 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@mantine/carousel@^5.10.4":
+  version "5.10.5"
+  resolved "https://registry.yarnpkg.com/@mantine/carousel/-/carousel-5.10.5.tgz#0735228c62e934dabd5f14521ae83d5cd56b6a15"
+  integrity sha512-r7KSNqGia/HHvZGSeOqcV2ptOpk/ljrgm6L92DE03i4DgUNT1y8QlF3hCK865xHecyj6nTRYDnoBLAuBufe/Yw==
+  dependencies:
+    "@mantine/utils" "5.10.5"
+
 "@mantine/core@^5.10.4":
   version "5.10.5"
   resolved "https://registry.yarnpkg.com/@mantine/core/-/core-5.10.5.tgz#071e14dcf8b94a36d0243f1f4b30305ac0074afd"
@@ -946,7 +972,23 @@
     temp "^0.9.4"
     tslib "^2.3.1"
 
-"@refinedev/core@^4.16.2", "@refinedev/core@^4.5.4", "@refinedev/core@^4.5.8":
+"@refinedev/core@4.18.0", "@refinedev/core@^4.18.0":
+  version "4.18.0"
+  resolved "https://registry.yarnpkg.com/@refinedev/core/-/core-4.18.0.tgz#d3b38df6fd831a242b07ba6a81e65e1022692965"
+  integrity sha512-Ml4bwI/zOTNKszb9pVD03NEt5SxgyaclnRcvYbFqGR53ffr3ZQz9y5rlNynHEKo335J9q1Ypzw0V6lF6V4geBg==
+  dependencies:
+    "@tanstack/react-query" "^4.10.1"
+    "@tanstack/react-query-devtools" "^4.10.1"
+    export-to-csv-fix-source-map "^0.2.1"
+    lodash "^4.17.21"
+    lodash-es "^4.17.21"
+    papaparse "^5.3.0"
+    pluralize "^8.0.0"
+    qs "^6.10.1"
+    tslib "^2.3.1"
+    warn-once "^0.1.0"
+
+"@refinedev/core@^4.5.4":
   version "4.16.4"
   resolved "https://registry.yarnpkg.com/@refinedev/core/-/core-4.16.4.tgz#e48ade31f4b5f875a1085de9602b6569684b6263"
   integrity sha512-qbHgnRaZzwS/qCUstE0icHm6Od7Ni50p1gQxTvXbWFHQfeE4ITBzZ4U1YZqIIIz9PPoKpf+7IAi50wa0nlP2Og==
@@ -962,13 +1004,13 @@
     tslib "^2.3.1"
     warn-once "^0.1.0"
 
-"@refinedev/inferencer@^3.5.4":
-  version "3.5.6"
-  resolved "https://registry.yarnpkg.com/@refinedev/inferencer/-/inferencer-3.5.6.tgz#b718fd20d48e34126926f7b8773525b48487e7c8"
-  integrity sha512-Ctni7rDoQoFTVTDS4z4FffOOusquqOss0K2EHQiS5Yeg1pnKmzN+UmLVdKp+IAlgCH82i7F94zsxZWsuUReL9g==
+"@refinedev/inferencer@3.5.8":
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/@refinedev/inferencer/-/inferencer-3.5.8.tgz#26760c0f3b442358b72587ec932f4d90998556e1"
+  integrity sha512-0ZFimj4WMfdJGcx7F0IJiUAKhGsb1sL3/1FAab4McnAZyqCoN730or0pwpa7kr5yN9BDM6zgxuYwb1d12fUImw==
   dependencies:
     "@aliemir/react-live" "^4.0.0"
-    "@refinedev/core" "^4.16.2"
+    "@refinedev/core" "^4.18.0"
     "@tabler/icons" "^1.1.0"
     dayjs "^1.10.7"
     lodash "^4.17.21"
@@ -987,10 +1029,10 @@
   dependencies:
     kbar "^0.1.0-beta.36"
 
-"@refinedev/mantine@^2.5.0":
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/@refinedev/mantine/-/mantine-2.16.0.tgz#e50cff02d4d0971aeb563549206cdbbdc3ca595a"
-  integrity sha512-INEqmOTo/b34NLAc1eB/Nzzk4N0XhlXHMegpU3YHLAmcWZ0LwHWKinUgWgcbn1YVWTqAQvhHFARp+q1O4N6oxw==
+"@refinedev/mantine@2.16.2":
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/@refinedev/mantine/-/mantine-2.16.2.tgz#bfec3a54b43b3dc87ccf465ecd0f6a52213971b5"
+  integrity sha512-ognSGFHbYKRBJWgZrmBFH2D+pyZLuZqOLkg5t7J0KBrSF4Fq9ioJ51xdjtq71+h46Lf0lJcaAN5CAz6NVmgkVQ==
   dependencies:
     "@emotion/react" "^11.8.2"
     "@mantine/core" "^5.10.4"
@@ -1019,10 +1061,10 @@
   dependencies:
     "@tanstack/react-table" "^8.2.6"
 
-"@refinedev/strapi-v4@^4.0.0":
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/@refinedev/strapi-v4/-/strapi-v4-4.3.1.tgz#b81a49b65a1a72f15a5c2e02cc90085fec20a78d"
-  integrity sha512-eor8no0HOM8oTDGG+o7HbQSfayES2YyKXkBB8NdW/elSwSVG+acMqvtX7vaNxWD3xiTF8Pnmk1XU/r4NG0N1qw==
+"@refinedev/strapi-v4@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@refinedev/strapi-v4/-/strapi-v4-5.0.2.tgz#99abef1471175c4a74b7f4dacfa0107f272ac766"
+  integrity sha512-Sts3DMRPAMRqyT0yGbsc1jCiNhncXdHdjDKolo9iEhpl4MHAua+S8YHW3NQUkqhgVJwarCEdRzImuVk9+ueOsA==
   dependencies:
     axios "^0.26.1"
     qs "^6.10.1"
@@ -2029,6 +2071,18 @@ electron-to-chromium@^1.4.411:
   version "1.4.416"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.416.tgz#7291f704168d3842ae4da3ae9fdc7bfbeb97d116"
   integrity sha512-AUYh0XDTb2vrj0rj82jb3P9hHSyzQNdTPYWZIhPdCOui7/vpme7+HTE07BE5jwuqg/34TZ8ktlRz6GImJ4IXjA==
+
+embla-carousel-react@^7.0.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.1.0.tgz#e716f4df7fd31f7ca3e59a3e011158167bc3c468"
+  integrity sha512-tbYRPRZSDNd2QLNqYDcArAakGIxtUbhS7tkP0dGXktXHGgcX+3ji3VrOUTOftBiujZrMV8kRxtrRUe/1soloIQ==
+  dependencies:
+    embla-carousel "7.1.0"
+
+embla-carousel@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-7.1.0.tgz#c770dd3ade9285a97f5e3b6bbf705bc35ec0f9b5"
+  integrity sha512-Bh8Pa8NWzgugLkf8sAGexQlBCNDFaej5BXiKgQdRJ1mUC9NWBrw9Z23YVPVGkguWoz5LMjZXXFVGCobl3UPt/Q==
 
 emoji-regex@^8.0.0:
   version "8.0.0"

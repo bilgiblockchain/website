@@ -1,122 +1,147 @@
 import {
-  ActionIcon,
-  Avatar,
-  Flex,
+  AspectRatio,
+  Burger,
+  Center,
+  Container,
   Group,
+  Image,
   Header as MantineHeader,
   Menu,
-  Sx,
-  Title,
-  useMantineColorScheme,
-  useMantineTheme,
+  createStyles,
 } from "@mantine/core";
-import { useGetIdentity, useGetLocale, useSetLocale } from "@refinedev/core";
-import {
-  HamburgerMenu,
-  RefineThemedLayoutV2HeaderProps,
-} from "@refinedev/mantine";
-import { IconLanguage, IconMoonStars, IconSun } from "@tabler/icons";
-import i18n from "i18next";
-import React from "react";
+import { useDisclosure } from "@mantine/hooks";
+import { RefineThemedLayoutV2HeaderProps } from "@refinedev/mantine";
+import { IconChevronDown } from "@tabler/icons";
+import { AppIcon } from "../app-icon";
 
-type IUser = {
-  id: number;
-  name: string;
-  avatar: string;
-};
+const HEADER_HEIGHT = 72;
+const useStyles = createStyles((theme) => ({
+  header: {
+    backgroundColor: "#77040d",
+  },
+  sticky: {
+    position: "sticky",
+    top: 0,
+  },
+  links: {
+    [theme.fn.smallerThan("sm")]: {
+      display: "none",
+    },
+  },
 
-export const Header: React.FC<RefineThemedLayoutV2HeaderProps> = ({
-  sticky,
-}) => {
-  const { data: user } = useGetIdentity<IUser>();
+  burger: {
+    [theme.fn.largerThan("sm")]: {
+      display: "none",
+    },
+  },
 
-  const changeLanguage = useSetLocale();
-  const locale = useGetLocale();
-  const currentLocale = locale();
+  link: {
+    display: "block",
+    lineHeight: 1,
+    padding: `8 12`,
+    borderRadius: theme.radius.sm,
+    textDecoration: "none",
+    color: "white",
+    fontSize: theme.fontSizes.sm,
+    fontWeight: 700,
+    letterSpacing: "2px",
 
-  const theme = useMantineTheme();
+    "&:hover": {
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[6]
+          : theme.colors.gray[0],
+    },
+  },
 
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+  linkLabel: {
+    marginRight: 4,
+  },
+}));
 
-  const borderColor = dark ? theme.colors.dark[6] : theme.colors.gray[2];
+type Links = {
+  link: string;
+  label: string;
+  links?: { link: string; label: string }[];
+}[];
+type Prop = {
+  links: Links;
+} & RefineThemedLayoutV2HeaderProps;
 
-  let stickyStyles: Sx = {};
-  if (sticky) {
-    stickyStyles = {
-      position: `sticky`,
-      top: 0,
-      zIndex: 1,
-    };
-  }
+export const Header: React.FC<Prop> = ({ sticky, links }) => {
+  const { classes, cx } = useStyles();
+  const [opened, { toggle }] = useDisclosure(false);
 
-  return (
-    <MantineHeader
-      zIndex={199}
-      height={64}
-      py={6}
-      px="sm"
-      sx={{
-        borderBottom: `1px solid ${borderColor}`,
-        ...stickyStyles,
-      }}
-    >
-      <Flex
-        align="center"
-        justify="space-between"
-        sx={{
-          height: "100%",
-        }}
+  const items = links.map((link) => {
+    const menuItems = link.links?.map((item) => (
+      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+    ));
+
+    if (menuItems) {
+      return (
+        <Menu key={link.label} trigger="hover" withinPortal>
+          <Menu.Target>
+            <a
+              href={link.link}
+              className={classes.link}
+              onClick={(event) => event.preventDefault()}
+            >
+              <Center>
+                <span className={classes.linkLabel}>{link.label}</span>
+                <IconChevronDown size="0.9rem" stroke={1.5} />
+              </Center>
+            </a>
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+        </Menu>
+      );
+    }
+
+    return (
+      <a
+        key={link.label}
+        href={link.link}
+        className={classes.link}
+        onClick={(event) => event.preventDefault()}
       >
-        <HamburgerMenu />
-        <Group>
-          <Menu shadow="md">
-            <Menu.Target>
-              <ActionIcon variant="outline">
-                <IconLanguage size={18} />
-              </ActionIcon>
-            </Menu.Target>
-
-            <Menu.Dropdown>
-              {[...(i18n.languages ?? [])].sort().map((lang: string) => (
-                <Menu.Item
-                  key={lang}
-                  onClick={() => {
-                    changeLanguage(lang);
-                  }}
-                  value={lang}
-                  color={lang === currentLocale ? "primary" : undefined}
-                  icon={
-                    <Avatar
-                      src={`/images/flags/${lang}.svg`}
-                      size={18}
-                      radius="lg"
-                    />
-                  }
-                >
-                  {lang === "en" ? "English" : "German"}
-                </Menu.Item>
-              ))}
-            </Menu.Dropdown>
-          </Menu>
-
-          <ActionIcon
-            variant="outline"
-            color={dark ? "yellow" : "primary"}
-            onClick={() => toggleColorScheme()}
-            title="Toggle color scheme"
+        {link.label}
+      </a>
+    );
+  });
+  return (
+    <>
+      <div style={{ backgroundColor: "white" }}>
+        <Container>
+          <Image src={"/images/text-logo.png"} width={"100%"} height={320} />
+        </Container>
+      </div>
+      <MantineHeader
+        height={HEADER_HEIGHT}
+        mb={120}
+        className={cx(classes.header, { [classes.sticky]: sticky })}
+      >
+        <Container>
+          <Group
+            style={{ justifyContent: "space-between", height: HEADER_HEIGHT }}
           >
-            {dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
-          </ActionIcon>
-
-          {(user?.name || user?.avatar) && (
-            <Group spacing="xs">
-              {user?.name && <Title order={6}>{user?.name}</Title>}
-              <Avatar src={user?.avatar} alt={user?.name} radius="xl" />
+            <AppIcon size={HEADER_HEIGHT * 0.8} />
+            {/* <Image
+              src={"/images/text-logo.png"}
+              width={240}
+              height={HEADER_HEIGHT}
+            /> */}
+            <Group spacing={20} className={classes.links}>
+              {items}
             </Group>
-          )}
-        </Group>
-      </Flex>
-    </MantineHeader>
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              className={classes.burger}
+              size="sm"
+            />
+          </Group>
+        </Container>
+      </MantineHeader>
+    </>
   );
 };
