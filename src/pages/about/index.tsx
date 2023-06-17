@@ -1,4 +1,4 @@
-import { Title, Text } from "@mantine/core";
+import { Title, Text, Image } from "@mantine/core";
 
 export const AboutPage = () => {
   return (
@@ -6,6 +6,7 @@ export const AboutPage = () => {
       <Title order={1} mb="lg">
         Hakkımızda
       </Title>
+      <Image src="/images/about.jpg" my="lg" height={400} fit="cover" />
       <Text>
         2020 yılında İstanbul Bilgi Üniversitesinde kurulmuş, Blockchain
         teknolojisinin hayatımıza kattığı 'yenilik' kavramını ilke edinmiş ve

@@ -12,7 +12,7 @@ export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
     },
     {
       link: "/tarihce",
-      label: "Tarihçe",
+      label: "TARİHÇE",
     },
     { link: "/arkhe", label: "arkhe" },
     { link: "/sss", label: "SSS" },
