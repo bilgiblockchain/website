@@ -29,6 +29,8 @@ import { FaqPage } from "./pages/faq";
 import { ContactPage } from "./pages/contact";
 import { TeamPage } from "./pages/team";
 import { HistoryPage } from "./pages/history";
+import { ArkhePage } from "./pages/arkhe";
+import ScrollToTop from "./components/util/ScrollToTop";
 
 const colorsOverride: Record<string, Tuple<string, 10>> = {
   brand: [
@@ -51,6 +53,7 @@ function App() {
     defaultValue: "light",
     getInitialValueInEffect: true,
   });
+  history.scrollRestoration = "manual";
   const { t, i18n } = useTranslation();
 
   const toggleColorScheme = (value?: ColorScheme) =>
@@ -103,36 +106,41 @@ function App() {
                   },
                 ]}
               >
-                <Routes>
-                  <Route
-                    element={
-                      <Layout>
-                        <Outlet />
-                      </Layout>
-                    }
-                  >
-                    <Route index element={<Home />} />
-                    <Route path="articles">
-                      <Route index element={<ArticleList />} />
-                      <Route path=":slug" element={<ArticleShow />} />
+                <ScrollToTop>
+                  <Routes>
+                    <Route
+                      element={
+                        <Layout>
+                          <Outlet />
+                        </Layout>
+                      }
+                    >
+                      <Route index element={<Home />} />
+                      <Route path="articles">
+                        <Route index element={<ArticleList />} />
+                        <Route path=":slug" element={<ArticleShow />} />
+                      </Route>
+                      <Route path="hakkimizda">
+                        <Route index element={<AboutPage />} />
+                      </Route>
+                      <Route path="ekip">
+                        <Route index element={<TeamPage />} />
+                      </Route>
+                      <Route path="iletisim">
+                        <Route index element={<ContactPage />} />
+                      </Route>
+                      <Route path="arkhe">
+                        <Route index element={<ArkhePage />} />
+                      </Route>
+                      <Route path="tarihce">
+                        <Route index element={<HistoryPage />} />
+                      </Route>
+                      <Route path="sss">
+                        <Route index element={<FaqPage />} />
+                      </Route>
                     </Route>
-                    <Route path="hakkimizda">
-                      <Route index element={<AboutPage />} />
-                    </Route>
-                    <Route path="ekip">
-                      <Route index element={<TeamPage />} />
-                    </Route>
-                    <Route path="iletisim">
-                      <Route index element={<ContactPage />} />
-                    </Route>
-                    <Route path="tarihce">
-                      <Route index element={<HistoryPage />} />
-                    </Route>
-                    <Route path="sss">
-                      <Route index element={<FaqPage />} />
-                    </Route>
-                  </Route>
-                </Routes>
+                  </Routes>
+                </ScrollToTop>
 
                 <RefineKbar />
                 <UnsavedChangesNotifier />

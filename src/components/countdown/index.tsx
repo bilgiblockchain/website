@@ -51,19 +51,19 @@ export const Countdown: React.FC = () => {
             >
               <Text className={classes.text}>
                 {days}
-                <span className={classes.span}>days</span>
+                <span className={classes.span}>Gün</span>
               </Text>
               <Text className={classes.text}>
                 {hours}
-                <span className={classes.span}>hours</span>
+                <span className={classes.span}>Saat</span>
               </Text>
               <Text className={classes.text}>
                 {minutes}
-                <span className={classes.span}>minutes</span>
+                <span className={classes.span}>Dakika</span>
               </Text>
               <Text className={classes.text}>
                 {seconds}
-                <span className={classes.span}>seconds</span>
+                <span className={classes.span}>Saniye</span>
               </Text>
             </Group>
           )}

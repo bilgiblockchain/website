@@ -1,14 +1,14 @@
-import { AspectRatio, Grid, Title, Text } from "@mantine/core";
+import { Grid, Title, Text } from "@mantine/core";
 
 export const ContactPage = () => {
   return (
     <>
       <Grid>
-        <Grid.Col span={8}>
+        <Grid.Col span={12} md={8}>
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSew_3XsaCpuX-ZQCUkFbVcSu89w0yLpMu0AHAS9QNqwQZM2dw/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfniFJCnAOHOe65rnRpKiV6TE_xIxgeJYR_SI_WXTWUnxFVcQ/viewform?embedded=true"
             width="100%"
-            height="600"
+            height="700"
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
@@ -16,7 +16,7 @@ export const ContactPage = () => {
             Yükleniyor…
           </iframe>
         </Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col span={12} md={4}>
           <Text>
             <Title order={1} my={24}>
               Adres
@@ -26,7 +26,9 @@ export const ContactPage = () => {
             Eyüpsultan 34060 İstanbul Türkiye
             <br />
             <br />
-            <Text fw={700}>E-Posta: info@BilgiBlockchain.com</Text>
+            <Text fw={700} c="brand">
+              E-Posta: bilgiblockchain@hotmail.com
+            </Text>
           </Text>
         </Grid.Col>
       </Grid>

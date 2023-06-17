@@ -146,8 +146,8 @@ export const Header: React.FC<Prop> = ({ sticky, links }) => {
           <Link to="/" style={{ display: "block" }}>
             <Image
               src={"/images/text-logo.png"}
-              width={"85%"}
-              height={280}
+              width={"100%"}
+              height={320}
               styles={{ root: { margin: "auto" }, image: { margin: "auto" } }}
             />
           </Link>
