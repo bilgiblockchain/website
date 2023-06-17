@@ -1,4 +1,4 @@
-import { Title, Text, Image } from "@mantine/core";
+import { Title, Text, Image, AspectRatio } from "@mantine/core";
 
 export const AboutPage = () => {
   return (
@@ -6,7 +6,9 @@ export const AboutPage = () => {
       <Title order={1} mb="lg">
         Hakkımızda
       </Title>
-      <Image src="/images/about.jpg" my="lg" height={400} fit="cover" />
+      <AspectRatio ratio={1.8} my="lg">
+        <Image src="/images/about.jpg" width="100%" />
+      </AspectRatio>
       <Text>
         2020 yılında İstanbul Bilgi Üniversitesinde kurulmuş, Blockchain
         teknolojisinin hayatımıza kattığı 'yenilik' kavramını ilke edinmiş ve

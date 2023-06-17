@@ -10,7 +10,6 @@ export const Home: React.FC = () => {
         Arkhe Blockchain Week 2023
       </Title>
       <Carousel
-        height={600}
         slideSize="100%"
         slideGap="md"
         align="start"
@@ -30,7 +29,9 @@ export const Home: React.FC = () => {
           .map(({ image }) => {
             return (
               <Carousel.Slide>
-                <Image src={image} fit="contain" />
+                <AspectRatio ratio={1.8}>
+                  <Image src={image} fit="contain" />
+                </AspectRatio>
               </Carousel.Slide>
             );
           })}
