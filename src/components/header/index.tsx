@@ -1,5 +1,5 @@
 import {
-  AspectRatio,
+  Box,
   Burger,
   Center,
   Container,
@@ -7,17 +7,19 @@ import {
   Image,
   Header as MantineHeader,
   Menu,
+  UnstyledButton,
   createStyles,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useColorScheme, useDisclosure } from "@mantine/hooks";
 import { RefineThemedLayoutV2HeaderProps } from "@refinedev/mantine";
 import { IconChevronDown } from "@tabler/icons";
 import { AppIcon } from "../app-icon";
+import { useLink } from "@refinedev/core";
 
-const HEADER_HEIGHT = 72;
+const HEADER_HEIGHT = 48;
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: "#77040d",
+    backgroundColor: theme.fn.primaryColor(),
   },
   sticky: {
     position: "sticky",
@@ -38,24 +40,42 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: "block",
     lineHeight: 1,
-    padding: `8 12`,
+    padding: "8px 12px",
     borderRadius: theme.radius.sm,
-    textDecoration: "none",
     color: "white",
     fontSize: theme.fontSizes.sm,
     fontWeight: 700,
     letterSpacing: "2px",
+    textDecoration: "none",
+    textTransform: "uppercase",
 
     "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
+      backgroundColor: "rgba(0,0,0,0.2)",
     },
   },
 
   linkLabel: {
     marginRight: 4,
+  },
+  dropdown: {
+    backgroundColor: theme.fn.primaryColor(),
+  },
+  burgermenu: {},
+  dropdownItem: {
+    "&[data-hovered]": {
+      backgroundColor: "rgba(0,0,0,0.2)",
+    },
+  },
+  dropdownItemLink: {
+    textDecoration: "none",
+    color: "white",
+    lineHeight: 1,
+    padding: "8px 12px",
+    borderRadius: theme.radius.sm,
+    textTransform: "uppercase",
+    fontSize: theme.fontSizes.sm,
+    fontWeight: 700,
+    letterSpacing: "2px",
   },
 }));
 
@@ -70,27 +90,38 @@ type Prop = {
 
 export const Header: React.FC<Prop> = ({ sticky, links }) => {
   const { classes, cx } = useStyles();
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, open, close }] = useDisclosure(false);
+  const Link = useLink();
+  const colorScheme = useColorScheme();
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Menu.Item key={item.link}>
+        <Link to={item.link} className={classes.dropdownItemLink}>
+          {item.label}
+        </Link>
+      </Menu.Item>
     ));
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" withinPortal>
+        <Menu
+          key={link.label}
+          trigger="hover"
+          withinPortal
+          offset={10}
+          classNames={{
+            dropdown: classes.dropdown,
+            item: classes.dropdownItem,
+          }}
+        >
           <Menu.Target>
-            <a
-              href={link.link}
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
+            <Link to={link.link} className={classes.link}>
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <IconChevronDown size="0.9rem" stroke={1.5} />
               </Center>
-            </a>
+            </Link>
           </Menu.Target>
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
@@ -98,23 +129,30 @@ export const Header: React.FC<Prop> = ({ sticky, links }) => {
     }
 
     return (
-      <a
-        key={link.label}
-        href={link.link}
-        className={classes.link}
-        onClick={(event) => event.preventDefault()}
-      >
+      <Link key={link.label} to={link.link} className={classes.link}>
         {link.label}
-      </a>
+      </Link>
     );
   });
   return (
     <>
-      <div style={{ backgroundColor: "white" }}>
+      <Box
+        sx={(theme) => ({
+          backgroundColor: "transparent",
+          // backgroundColor: theme.colorScheme === "dark" ? "dark.9" : "transparent",
+        })}
+      >
         <Container>
-          <Image src={"/images/text-logo.png"} width={"100%"} height={320} />
+          <Link to="/" style={{ display: "block" }}>
+            <Image
+              src={"/images/text-logo.png"}
+              width={"85%"}
+              height={280}
+              styles={{ root: { margin: "auto" }, image: { margin: "auto" } }}
+            />
+          </Link>
         </Container>
-      </div>
+      </Box>
       <MantineHeader
         height={HEADER_HEIGHT}
         mb={120}
@@ -124,21 +162,36 @@ export const Header: React.FC<Prop> = ({ sticky, links }) => {
           <Group
             style={{ justifyContent: "space-between", height: HEADER_HEIGHT }}
           >
-            <AppIcon size={HEADER_HEIGHT * 0.8} />
-            {/* <Image
-              src={"/images/text-logo.png"}
-              width={240}
-              height={HEADER_HEIGHT}
-            /> */}
+            <Link to="/">
+              <AppIcon size={HEADER_HEIGHT * 0.8} />
+            </Link>
+
             <Group spacing={20} className={classes.links}>
               {items}
             </Group>
-            <Burger
+            <Menu
+              shadow="md"
+              width={200}
               opened={opened}
-              onClick={toggle}
-              className={classes.burger}
-              size="sm"
-            />
+              onChange={(newState) => (newState ? open() : close())}
+              position="bottom-end"
+              classNames={{
+                dropdown: cx(classes.dropdown, classes.burgermenu),
+                item: classes.dropdownItem,
+              }}
+            >
+              <Menu.Target>
+                <UnstyledButton className={classes.burger}>
+                  <Burger
+                    opened={opened}
+                    onClick={toggle}
+                    size="sm"
+                    color="white"
+                  />
+                </UnstyledButton>
+              </Menu.Target>
+              <Menu.Dropdown>{items.map((item) => item)}</Menu.Dropdown>
+            </Menu>
           </Group>
         </Container>
       </MantineHeader>

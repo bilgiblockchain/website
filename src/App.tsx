@@ -8,6 +8,7 @@ import {
   ColorSchemeProvider,
   Global,
   MantineProvider,
+  Tuple,
 } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 import { NotificationsProvider } from "@mantine/notifications";
@@ -23,6 +24,26 @@ import { Home } from "./pages/home";
 import { ArticleList } from "./pages/articles/list";
 import { ArticleShow } from "./pages/articles/show";
 import { Layout } from "./components/layout";
+import { AboutPage } from "./pages/about";
+import { FaqPage } from "./pages/faq";
+import { ContactPage } from "./pages/contact";
+import { TeamPage } from "./pages/team";
+import { HistoryPage } from "./pages/history";
+
+const colorsOverride: Record<string, Tuple<string, 10>> = {
+  brand: [
+    "#EEE7E8",
+    "#CAAEB0",
+    "#B4797D",
+    "#A64B52",
+    "#912F37",
+    "#821820",
+    "#77040D",
+    "#4E0E13",
+    "#341114",
+    "#241012",
+  ],
+};
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -48,9 +69,17 @@ function App() {
           colorScheme={colorScheme}
           toggleColorScheme={toggleColorScheme}
         >
-          {/* You can change the theme colors here. example: theme={{ ...RefineThemes.Magenta, colorScheme:colorScheme }} */}
           <MantineProvider
-            theme={{ ...RefineThemes.Blue, colorScheme: colorScheme }}
+            theme={{
+              ...RefineThemes.Red,
+              colors: {
+                ...RefineThemes.Red.colors,
+                ...colorsOverride,
+              },
+              colorScheme: colorScheme,
+              primaryColor: "brand",
+              primaryShade: 6,
+            }}
             withNormalizeCSS
             withGlobalStyles
           >
@@ -86,6 +115,21 @@ function App() {
                     <Route path="articles">
                       <Route index element={<ArticleList />} />
                       <Route path=":slug" element={<ArticleShow />} />
+                    </Route>
+                    <Route path="hakkimizda">
+                      <Route index element={<AboutPage />} />
+                    </Route>
+                    <Route path="ekip">
+                      <Route index element={<TeamPage />} />
+                    </Route>
+                    <Route path="iletisim">
+                      <Route index element={<ContactPage />} />
+                    </Route>
+                    <Route path="tarihce">
+                      <Route index element={<HistoryPage />} />
+                    </Route>
+                    <Route path="sss">
+                      <Route index element={<FaqPage />} />
                     </Route>
                   </Route>
                 </Routes>
