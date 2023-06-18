@@ -12,7 +12,12 @@ import {
 } from "@mantine/core";
 import { useColorScheme, useDisclosure } from "@mantine/hooks";
 import { RefineThemedLayoutV2HeaderProps } from "@refinedev/mantine";
-import { IconChevronDown } from "@tabler/icons";
+import {
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandTwitter,
+  IconChevronDown,
+} from "@tabler/icons";
 import { AppIcon } from "../app-icon";
 import { useLink } from "@refinedev/core";
 
@@ -162,9 +167,31 @@ export const Header: React.FC<Prop> = ({ sticky, links }) => {
           <Group
             style={{ justifyContent: "space-between", height: HEADER_HEIGHT }}
           >
-            <Link to="/">
-              <AppIcon size={HEADER_HEIGHT * 0.8} />
-            </Link>
+            <Group
+              align="center"
+              sx={(theme) => ({
+                "& a": { lineHeight: "0.5em", color: theme.colors.brand[1] },
+              })}
+            >
+              <Link to="/">
+                <AppIcon size={HEADER_HEIGHT * 0.8} mr="lg" />
+              </Link>
+              <a
+                href="https://www.instagram.com/bilgiblockchain/"
+                target="_blank"
+              >
+                <IconBrandInstagram size={20} />
+              </a>
+              <a href="https://twitter.com/bilgiblockchain" target="_blank">
+                <IconBrandTwitter size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/bilgi-blockchain/"
+                target="_blank"
+              >
+                <IconBrandLinkedin size={20} />
+              </a>
+            </Group>
 
             <Group spacing={20} className={classes.links}>
               {items}
