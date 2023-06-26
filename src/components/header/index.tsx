@@ -16,6 +16,7 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandTwitter,
+  IconBrandYoutube,
   IconChevronDown,
 } from "@tabler/icons";
 import { AppIcon } from "../app-icon";
@@ -50,7 +51,7 @@ const useStyles = createStyles((theme) => ({
     color: "white",
     fontSize: theme.fontSizes.sm,
     fontWeight: 700,
-    letterSpacing: "2px",
+    letterSpacing: "1px",
     textDecoration: "none",
     textTransform: "uppercase",
 
@@ -174,8 +175,14 @@ export const Header: React.FC<Prop> = ({ sticky, links }) => {
               })}
             >
               <Link to="/">
-                <AppIcon size={HEADER_HEIGHT * 0.8} mr="lg" />
+                <AppIcon size={HEADER_HEIGHT * 0.8} mr="sm" />
               </Link>
+              <a
+                href="https://www.youtube.com/@bilgiblockchain"
+                target="_blank"
+              >
+                <IconBrandYoutube size={20} />
+              </a>
               <a
                 href="https://www.instagram.com/bilgiblockchain/"
                 target="_blank"
@@ -193,7 +200,7 @@ export const Header: React.FC<Prop> = ({ sticky, links }) => {
               </a>
             </Group>
 
-            <Group spacing={20} className={classes.links}>
+            <Group spacing={4} className={classes.links}>
               {items}
             </Group>
             <Menu
