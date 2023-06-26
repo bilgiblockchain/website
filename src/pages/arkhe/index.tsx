@@ -28,7 +28,7 @@ export const ArkhePage: React.FC = () => {
             yaşayabilirsiniz!
             <Box mx="auto" w="max-content" my="xl">
               <a
-                href="https://archeprojesi.com/gelecek-programlar"
+                href="https://archeprojesi.com/gelecek-programlar?sub_course=arkheblockchainweeks"
                 target="_blank"
               >
                 <Button color="brand" size="xl" my="xl">
