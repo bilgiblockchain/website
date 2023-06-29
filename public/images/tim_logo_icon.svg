@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="606.66669"
+   height="606.66669"
+   viewBox="0 0 606.66669 606.66669"
+   sodipodi:docname="tim_logo_icon.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,455 H 455 V 0 H 0 Z"
+         id="path14" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="tim_logo_icon"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,606.66667)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="translate(444.4883,216.1167)">
+          <path
+             d="m 0,0 c -1.228,119.22 -98.26,216.21 -216.305,216.21 -120.032,0 -217.683,-97.035 -217.683,-216.309 0,-5.332 4.322,-9.654 9.654,-9.654 5.332,0 9.654,4.322 9.654,9.654 0,108.628 88.99,197.001 198.375,197.001 107.509,0 195.877,-88.418 196.996,-197.1 0.813,-79.115 -45.963,-134.865 -86.274,-158.565 -28.002,-16.469 -55.762,-20.007 -74.238,-9.474 -16.626,9.474 -25.463,30.094 -25.557,59.636 -0.039,11.764 -0.02,47.166 -0.01,73.675 h 31.775 c 5.332,0 9.654,4.322 9.654,9.654 0,5.332 -4.322,9.654 -9.654,9.654 h -31.767 l 0.002,6.241 c 0,26.608 -12.303,41.583 -22.621,49.457 -4.228,3.233 -10.297,2.423 -13.53,-1.82 -3.239,-4.238 -2.422,-10.298 1.817,-13.533 9.827,-7.5 15.025,-19.293 15.025,-34.418 l -0.002,-5.927 h -24.336 c -5.332,0 -9.654,-4.322 -9.654,-9.654 0,-5.332 4.322,-9.654 9.654,-9.654 h 24.329 c -0.015,-26.533 -0.03,-61.964 0.009,-73.739 0.149,-46.558 19.279,-67.216 35.3,-76.348 9.912,-5.646 21.512,-8.431 34.068,-8.431 18.57,0 39.215,6.094 59.524,18.036 C -51.043,-149.094 0.901,-87.366 0,0"
+             style="fill:#ff8400;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
