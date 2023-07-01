@@ -30,6 +30,7 @@ const useStyles = createStyles((theme) => ({
   sticky: {
     position: "sticky",
     top: 0,
+    
   },
   links: {
     [theme.fn.smallerThan("sm")]: {
