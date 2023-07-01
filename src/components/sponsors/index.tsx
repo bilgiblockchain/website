@@ -67,7 +67,7 @@ export const Sponsors: React.FC = () => {
           </a>
         </Grid.Col>
         <Grid.Col span={12}>
-          <Text className={classes.span}>Media Sponsoru</Text>
+          <Text className={classes.span}>Medya Sponsoru</Text>
         </Grid.Col>
         <Grid.Col span={12} sm={3}>
           <a href="https://www.btchaber.com/">

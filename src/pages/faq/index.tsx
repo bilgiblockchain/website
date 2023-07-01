@@ -1,4 +1,6 @@
 import { Title, Text, Divider, Box, Button } from "@mantine/core";
+import { link } from "fs";
+import { Link } from "react-router-dom";
 
 export const FaqPage = () => {
   return (
@@ -32,8 +34,16 @@ export const FaqPage = () => {
           tıklayabilirsiniz.
         </Text>
         <Box my="sm">
+          <Link to= "https://forms.gle/yeu2GQ1aFKYCC7ST6">
           <Button variant="light">Üye Başvuru</Button>{" "}
+          </Link>
+
+          <Link to= "https://forms.gle/3Y1cVX4ys5GiuFUk9">
           <Button>Ekip Başvuru</Button>
+          </Link>
+          
+
+          
         </Box>
         <br />
         <Title order={2}>
