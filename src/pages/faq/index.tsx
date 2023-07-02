@@ -34,11 +34,11 @@ export const FaqPage = () => {
           tıklayabilirsiniz.
         </Text>
         <Box my="sm">
-          <Link to= "https://forms.gle/yeu2GQ1aFKYCC7ST6">
+          <Link to= "https://forms.gle/yeu2GQ1aFKYCC7ST6" target="_blank">
           <Button variant="light">Üye Başvuru</Button>{" "}
           </Link>
 
-          <Link to= "https://forms.gle/3Y1cVX4ys5GiuFUk9">
+          <Link to= "https://forms.gle/3Y1cVX4ys5GiuFUk9" target="_blank">
           <Button>Ekip Başvuru</Button>
           </Link>
           
