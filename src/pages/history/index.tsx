@@ -74,12 +74,12 @@ export const HistoryPage = () => {
             iki alanda da çok ciddi, daha önce hiç örneği olmayan atılımlar
             gerçekleştirdik. Kulübümüzün resmi YouTube kanalını açarak içerisini
             birbirinden farklı videolarla doldururken, Zincirsiz adını
-            verdiğimiz TalkShow programımız ile gündemde büyük yer edindik. Ek
-            olarak eğitim tarafında ise, 2022'de birlikte yolculuğa çıktığımız
-            Arkhe Projesi ile birlikte Türkiye'deki Blockchain ekosisteminde
-            daha önce hiç görülmemiş seviyede Blockchain kampları düzenledik. Bu
+            verdiğimiz TalkShow programımız ile gündemde büyük yer edindik.
+            Eğitim tarafında ise, 2022'de yolculuğa çıktığımız Arkhe Projesi ile
+            birlikte Türkiye'deki Blockchain ekosisteminde daha önce hiç
+            görülmemiş seviyede Blockchain kampları düzenleyeceğiz. Bu
             kamplarımızda yüzlerce öğrenciye, onlarca yıldız isimle birlikte
-            hayatları boyunca unutamayacakları güzel deneyimler yaşattık. Her
+            hayatları boyunca unutamayacakları güzel deneyimler yaşatacağız. Her
             zaman hedeflediğimiz gibi, bundan sonra da gerçekleştirceğimiz
             projelerimiz ile 'Bir kulüpten daha fazlası' olmaya devam edeceğiz.
           </Text>
