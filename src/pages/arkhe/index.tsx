@@ -42,6 +42,13 @@ export const ArkhePage: React.FC = () => {
       <InfoGroup />
       <Tutors />
       <Sponsors />
+      <Text ta="center" c="dark.4">
+        Kurumsal iş birlikleri için{" "}
+        <Text fw={700} c="brand" span>
+          bilgiblockchain@hotmail.com
+        </Text>{" "}
+        mail adresinden bizimle iletişime geçebilirsiniz.
+      </Text>
     </>
   );
 };
