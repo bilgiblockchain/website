@@ -10,21 +10,15 @@ export const teamData = [
       },
       {
         name: "Hasan Can Tüfekçi",
-        span: "Başkan Yardımcısı/Yazılım Departman Direktörü",
+        span: "Başkan Yardımcısı",
         link: "https://www.linkedin.com/in/can-t%C3%BCfek%C3%A7i-05121b212/",
         image: "/images/team/Hasan_Can_Tufekci.png",
       },
       {
-        name: "Berfin Algül",
-        span: "Medya Departman Direktörü",
-        link: "https://www.linkedin.com/in/berfin-algul/",
-        image: "/images/team/Berfin_Algul.png",
-      },
-      {
-        name: "Ekin Akoğuz",
-        span: "Etkinlik Departman Direktörü",
-        link: "https://www.linkedin.com/in/ekin-ako%C4%9Fuz-69166423b/",
-        image: "/images/team/Ekin_Akoguz.png",
+        name: "Lukas Çakıcı",
+        span: "Yazılım Departman Direktörü",
+        link: "https://www.linkedin.com/in/lukascakici/",
+        image: "/images/team/Lukas_Cakici.png",
       },
       {
         name: "Mehmet Tolga Çakan",
@@ -37,6 +31,12 @@ export const teamData = [
         span: "İnsan Kaynakları Departman Direktörü",
         link: "https://www.linkedin.com/in/mehmet-akif-duran-9a016024a/",
         image: "/images/team/Mehmet_Akif_Duran.png",
+      },
+      {
+        name: "Anılcan Çelikdel",
+        span: "Etkinlik Organizasyon Departman Direktörü",
+        link: "https://www.linkedin.com/in/anilcancelikdel",
+        image: "/images/team/Anilcan_Celikdel.png",
       },
     ],
   },
@@ -60,6 +60,12 @@ export const teamData = [
         span: "Medya Departmanı",
         link: "https://www.linkedin.com/in/emirhan-c/",
         image: "/images/team/Emirhan_Cetinkaya.png",
+      },
+      {
+        name: "Berfin Algül",
+        span: "Medya Departmanı",
+        link: "https://www.linkedin.com/in/berfin-algul/",
+        image: "/images/team/Berfin_Algul.png",
       },
       {
         name: "Yiğit Kaya Özkan",
@@ -92,12 +98,6 @@ export const teamData = [
         image: "/images/team/Mehmet_Yasir_Saher.png",
       },
       {
-        name: "Anılcan Çelikdel",
-        span: "Medya Departmanı",
-        link: "https://www.linkedin.com/in/anilcancelikdel",
-        image: "/images/team/Anilcan_Celikdel.png",
-      },
-      {
         name: "Mehmet Ali Çağlayan",
         span: "Medya Departmanı",
         link: "https://www.linkedin.com/in/mehmet-ali-%C3%A7a%C4%9Flayan-39b632216/",
@@ -108,12 +108,6 @@ export const teamData = [
         span: "Medya Departmanı",
         link: "https://www.linkedin.com/in/umut-bin%C3%B6z-b94b8327a",
         image: "/images/team/Umut_Binoz.png",
-      },
-      {
-        name: "Lukas Çakıcı",
-        span: "Yazılım Departmanı",
-        link: "https://www.linkedin.com/in/lukascakici/",
-        image: "/images/team/Lukas_Cakici.png",
       },
       {
         name: "Burhan Keten",
@@ -174,6 +168,12 @@ export const teamData = [
         span: "Yazar",
         link: "https://www.linkedin.com/in/nihalcelik00/",
         image: "/images/team/Nihal_Celik.png",
+      },
+      {
+        name: "Ekin Akoğuz",
+        span: "Etkinlik Organizasyon Departmanı",
+        link: "https://www.linkedin.com/in/ekin-ako%C4%9Fuz-69166423b/",
+        image: "/images/team/Ekin_Akoguz.png",
       },
     ],
   },
