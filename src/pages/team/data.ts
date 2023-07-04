@@ -164,12 +164,6 @@ export const teamData = [
         image: "/images/team/Ibrahim_Ethem_Delen.png",
       },
       {
-        name: "Nihal Çelik",
-        span: "Yazar",
-        link: "https://www.linkedin.com/in/nihalcelik00/",
-        image: "/images/team/Nihal_Celik.png",
-      },
-      {
         name: "Ekin Akoğuz",
         span: "Etkinlik Organizasyon Departmanı",
         link: "https://www.linkedin.com/in/ekin-ako%C4%9Fuz-69166423b/",
