@@ -76,7 +76,7 @@ export const tutorsData = [
   },
   {
     name: "Özge Erdemir",
-    span: "Tradingview",
+    span: "",
     image: "/images/tutors/Ozge_Erdemir.png",
   },
   {
