@@ -134,10 +134,10 @@ export const teamData = [
         image: "/images/team/Yigit_Samil_Ercedogan.png",
       },
       {
-        name: "Emirhan Sarıdağ",
+        name: "Kerem Yanlıç",
         span: "Yazılım Departmanı",
-        link: "https://www.linkedin.com/in/emirhan-sar%C4%B1da%C4%9F-31a251229/",
-        image: "/images/team/Emirhan_Saridag.png",
+        link: "https://www.linkedin.com/in/kerem-yanlic-714975228/",
+        image: "/images/team/Kerem_Yanlic.png",
       },
       {
         name: "Ömer Yiğit",
