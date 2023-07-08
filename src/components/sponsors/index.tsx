@@ -44,7 +44,7 @@ export const Sponsors: React.FC = () => {
         <Grid.Col span={12}>
           <Text className={classes.span}>Destekçiler</Text>
         </Grid.Col>
-        <Grid.Col span={12} sm={4}>
+        <Grid.Col span={12} sm={3}>
           <a
             href="https://istanbulblockchainwomen.org/"
             title="Blockchain Women İstanbul"
@@ -56,14 +56,19 @@ export const Sponsors: React.FC = () => {
             />
           </a>
         </Grid.Col>
-        <Grid.Col span={12} sm={4}>
+        <Grid.Col span={12} sm={3}>
           <a href="https://www.altcointurk.com/" title="altcointurk">
             <Image src="/images/altcointurk.png" height={120} />
           </a>
         </Grid.Col>
-        <Grid.Col span={12} sm={4}>
+        <Grid.Col span={12} sm={3}>
           <a href="https://tim.com.tr/" title="Tim Danışmanlık">
             <Image src="/images/tim_logo_tr.svg" height={120} />
+          </a>
+        </Grid.Col>
+        <Grid.Col span={12} sm={3}>
+          <a href="https://www.web3dernegi.com" title="Web3 Teknolojileri Derneği">
+            <Image src="/images/web3-logo.png" height={120} fit="scale-down" />
           </a>
         </Grid.Col>
         <Grid.Col span={12}>
