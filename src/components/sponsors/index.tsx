@@ -58,7 +58,7 @@ export const Sponsors: React.FC = () => {
         </Grid.Col>
         <Grid.Col span={12} sm={3}>
           <a href="https://www.altcointurk.com/" title="altcointurk">
-            <Image src="/images/altcointurk.png" height={120} />
+            <Image src="/images/altcointurk-yeni.png" height={120} />
           </a>
         </Grid.Col>
         <Grid.Col span={12} sm={3}>
@@ -67,7 +67,10 @@ export const Sponsors: React.FC = () => {
           </a>
         </Grid.Col>
         <Grid.Col span={12} sm={3}>
-          <a href="https://www.web3dernegi.com" title="Web3 Teknolojileri Derneği">
+          <a
+            href="https://www.web3dernegi.com"
+            title="Web3 Teknolojileri Derneği"
+          >
             <Image src="/images/web3-logo.png" height={120} fit="scale-down" />
           </a>
         </Grid.Col>
