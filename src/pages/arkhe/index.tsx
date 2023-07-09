@@ -1,9 +1,21 @@
 import { Tutors } from "../../components/tutors";
 import { Countdown } from "../../components/countdown";
 import { StyledGallery } from "../../components/styledGallery";
-import { Box, Button, Grid, Group, Text, Title } from "@mantine/core";
+import {
+  Box,
+  Button,
+  Grid,
+  Group,
+  Text,
+  Title,
+  Image,
+  AspectRatio,
+} from "@mantine/core";
 import { InfoGroup } from "../../components/infoGroup";
 import { Sponsors } from "../../components/sponsors";
+import { Carousel } from "@mantine/carousel";
+import { IconArrowNarrowRight } from "@tabler/icons";
+import { Camps } from "../../components/camps";
 
 export const ArkhePage: React.FC = () => {
   return (
@@ -41,6 +53,7 @@ export const ArkhePage: React.FC = () => {
       </Grid>
       <InfoGroup />
       <Tutors />
+      <Camps />
       <Sponsors />
       <Text ta="center" c="dark.4">
         Kurumsal iş birlikleri için{" "}
