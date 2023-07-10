@@ -36,8 +36,8 @@ export const StyledGallery: React.FC = () => {
       <Stack align="flex-end" className={classes.stack}>
         <Image
           src="/images/01.jpeg"
-          className={classes.image}
           height={smallScreen ? 90 : 140}
+          width={(smallScreen ? 90 : 140) * 1.3357142857142856}
           radius="md"
           withPlaceholder
         />
@@ -45,6 +45,7 @@ export const StyledGallery: React.FC = () => {
           src="/images/02.jpeg"
           className={classes.image}
           width={smallScreen ? 90 : 140}
+          height={(smallScreen ? 90 : 140) / 0.7486631016042781}
           radius="md"
           withPlaceholder
         />
@@ -52,6 +53,7 @@ export const StyledGallery: React.FC = () => {
           src="/images/03.jpeg"
           className={classes.image}
           height={smallScreen ? 90 : 140}
+          width={(smallScreen ? 90 : 140) * 1.3357142857142856}
           radius="md"
           withPlaceholder
         />
@@ -61,6 +63,7 @@ export const StyledGallery: React.FC = () => {
           src="/images/04.jpeg"
           className={classes.image}
           height={smallScreen ? 80 : 110}
+          width={(smallScreen ? 80 : 110) * 1.6818181818181819}
           radius="md"
           withPlaceholder
         />
@@ -68,6 +71,7 @@ export const StyledGallery: React.FC = () => {
           src="/images/05.jpeg"
           className={classes.image}
           height={smallScreen ? 80 : 120}
+          width={(smallScreen ? 80 : 120) * 1.5416666666666667}
           radius="md"
           withPlaceholder
         />
@@ -75,6 +79,7 @@ export const StyledGallery: React.FC = () => {
           src="/images/06.jpeg"
           className={classes.image}
           width={smallScreen ? 90 : 140}
+          height={(smallScreen ? 90 : 140) / 0.7486631016042781}
           radius="md"
           withPlaceholder
         />
