@@ -936,10 +936,10 @@
   resolved "https://registry.npmjs.org/@reach/observe-rect/-/observe-rect-1.2.0.tgz"
   integrity sha512-Ba7HmkFgfQxZqqaeIWWkNK0rEhpxVQHIoVyW1YDSkGsGIXzcaW4deC8B0pZrNSSyLTdIk7y+5olKt5+g0GmFIQ==
 
-"@refinedev/cli@^2.5.1":
-  version "2.5.5"
-  resolved "https://registry.npmjs.org/@refinedev/cli/-/cli-2.5.5.tgz"
-  integrity sha512-2uyc7LgaDCKBLWTkj6Cpm35NyvukCSbBxaN+de5qVjkhIrC9u8/vi/S3g91NusQ+F1vj/FzyCWAxQ/qt2ztmAw==
+"@refinedev/cli@2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@refinedev/cli/-/cli-2.7.2.tgz#561f1dd695292a0a89ca35ef2a56a72c0aa3347b"
+  integrity sha512-1yTU8yM7DKXmxd914WcQNkcsDRJcN16KZm7EaUHhlM6Jjo5tB3noMEqrq7zkMDgc3zqE8XRLClpDCaxL7r3ZPQ==
   dependencies:
     boxen "^5.1.2"
     cardinal "^2.1.1"
@@ -972,10 +972,10 @@
     temp "^0.9.4"
     tslib "^2.3.1"
 
-"@refinedev/core@4.18.0", "@refinedev/core@^4.18.0", "@refinedev/core@^4.5.4":
-  version "4.18.0"
-  resolved "https://registry.npmjs.org/@refinedev/core/-/core-4.18.0.tgz"
-  integrity sha512-Ml4bwI/zOTNKszb9pVD03NEt5SxgyaclnRcvYbFqGR53ffr3ZQz9y5rlNynHEKo335J9q1Ypzw0V6lF6V4geBg==
+"@refinedev/core@4.26.4", "@refinedev/core@^4.26.0", "@refinedev/core@^4.26.4":
+  version "4.26.4"
+  resolved "https://registry.yarnpkg.com/@refinedev/core/-/core-4.26.4.tgz#881f479e933ec52bdd91e228fb211eb99f4c5afc"
+  integrity sha512-hpdSnLRRfft8qz+SY1Ru0DhZ1t9D/9Q9cBl/FQ2IHQSHR5QKTyFMc04MqCOzmF3Bo6KXRb7ZsfdRNOVE1nZ0cQ==
   dependencies:
     "@tanstack/react-query" "^4.10.1"
     "@tanstack/react-query-devtools" "^4.10.1"
@@ -988,13 +988,13 @@
     tslib "^2.3.1"
     warn-once "^0.1.0"
 
-"@refinedev/inferencer@3.5.8":
-  version "3.5.8"
-  resolved "https://registry.npmjs.org/@refinedev/inferencer/-/inferencer-3.5.8.tgz"
-  integrity sha512-0ZFimj4WMfdJGcx7F0IJiUAKhGsb1sL3/1FAab4McnAZyqCoN730or0pwpa7kr5yN9BDM6zgxuYwb1d12fUImw==
+"@refinedev/inferencer@4.3.2":
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@refinedev/inferencer/-/inferencer-4.3.2.tgz#11762db635036d8c6143f6c2e2d4b1b17afd6fae"
+  integrity sha512-byBevs8HE2TW/uk2wt7+TgPfp/bUd9WO5ZMOs3QkAwWsn+Lta5mcpBlFcXILP9XtFRPpWZ3IMLdWP3GMjA34Kg==
   dependencies:
     "@aliemir/react-live" "^4.0.0"
-    "@refinedev/core" "^4.18.0"
+    "@refinedev/core" "^4.26.4"
     "@tabler/icons" "^1.1.0"
     dayjs "^1.10.7"
     lodash "^4.17.21"
@@ -1006,24 +1006,24 @@
     remark-gfm "^1.0.0"
     tslib "^2.3.1"
 
-"@refinedev/kbar@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@refinedev/kbar/-/kbar-1.1.0.tgz"
-  integrity sha512-BnGhoyiRR1clHRKs9XnLEJkS6WoNJpZHg2r+Ez6iJpdtiaGnrz4+S9HN5XJukd57NCL/yt+CXD01SHlc3KrnPA==
+"@refinedev/kbar@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@refinedev/kbar/-/kbar-1.1.2.tgz#3bb2fd09f598f3046315edc043694b82ba66bd25"
+  integrity sha512-IPq8SQ+Oe4jOFq0aSVQ3Rg03Yoltez3evqZvjyw4X3PbCqyeatGD9Iarg8DQ8rEHO2YoXM1BipI3Bo0l1lXMiQ==
   dependencies:
-    kbar "^0.1.0-beta.36"
+    kbar "^0.1.0-beta.40"
 
-"@refinedev/mantine@2.16.2":
-  version "2.16.2"
-  resolved "https://registry.npmjs.org/@refinedev/mantine/-/mantine-2.16.2.tgz"
-  integrity sha512-ognSGFHbYKRBJWgZrmBFH2D+pyZLuZqOLkg5t7J0KBrSF4Fq9ioJ51xdjtq71+h46Lf0lJcaAN5CAz6NVmgkVQ==
+"@refinedev/mantine@2.22.2":
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/@refinedev/mantine/-/mantine-2.22.2.tgz#31ad6454e5b7d2649e64b3828fe31409feedbe20"
+  integrity sha512-hdZjxCu03Tx9qAaSRZygmPTdgCbhEVezpW+f1TNI3bAJZPx6Vhs0+boGtCIc0TdFEDbUEn01aibgWUa5xOl5ug==
   dependencies:
     "@emotion/react" "^11.8.2"
     "@mantine/core" "^5.10.4"
     "@mantine/form" "^5.10.4"
     "@mantine/hooks" "^5.10.4"
     "@mantine/notifications" "^5.10.4"
-    "@refinedev/ui-types" "^1.16.0"
+    "@refinedev/ui-types" "^1.18.0"
     "@tabler/icons" "^1.1.0"
     dayjs "^1.10.7"
     react-markdown "^6.0.1"
@@ -1053,12 +1053,12 @@
     axios "^0.26.1"
     qs "^6.10.1"
 
-"@refinedev/ui-types@^1.16.0":
-  version "1.16.0"
-  resolved "https://registry.npmjs.org/@refinedev/ui-types/-/ui-types-1.16.0.tgz"
-  integrity sha512-qX72/EwBhjz8uIhdU17pTMu337K8xdvyToBwsqYvmEKp3QzNFnQKaOilWToBrguuYZjPgA6VnONqmfhQNurshA==
+"@refinedev/ui-types@^1.18.0":
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/@refinedev/ui-types/-/ui-types-1.18.0.tgz#c98cdde42dc2a49720493125e06535e19b345e9c"
+  integrity sha512-fh2wcFKbm/q/x8mKpCt6gX0Q8yyt71UH9Ed2QS4jVD9NcuiAXFkaac/uXSemNmyzcu3EMxjUf7p/MdByE1flYw==
   dependencies:
-    "@refinedev/core" "^4.5.4"
+    "@refinedev/core" "^4.26.0"
     dayjs "^1.10.7"
     tslib "^2.3.1"
 
@@ -3265,9 +3265,9 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-kbar@^0.1.0-beta.36:
+kbar@^0.1.0-beta.40:
   version "0.1.0-beta.40"
-  resolved "https://registry.npmjs.org/kbar/-/kbar-0.1.0-beta.40.tgz"
+  resolved "https://registry.yarnpkg.com/kbar/-/kbar-0.1.0-beta.40.tgz#89747e3c1538375fef779af986b6614bb441ae7c"
   integrity sha512-vEV02WuEBvKaSivO2DnNtyd3gUAbruYrZCax5fXcLcVTFV6q0/w6Ew3z6Qy+AqXxbZdWguwQ3POIwgdHevp+6A==
   dependencies:
     "@radix-ui/react-portal" "^1.0.1"
