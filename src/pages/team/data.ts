@@ -21,16 +21,22 @@ export const teamData = [
         image: "/images/team/Lukas_Cakici.png",
       },
       {
-        name: "Mehmet Tolga Çakan",
-        span: "Yazı İşleri Departman Direktörü",
-        link: "https://www.linkedin.com/in/tolga-%C3%A7akan-7aa399204/",
-        image: "/images/team/Mehmet_Tolga_Cakan.png",
+        name: "Ege Eyigüngör",
+        span: "Medya Departman Direktörü",
+        link: "https://www.linkedin.com/in/ege-eyig%C3%BCng%C3%B6r-82b688228/",
+        image: "/images/team/Ege_Eyigungor.png",
       },
       {
         name: "Mehmet Akif Duran",
         span: "İnsan Kaynakları Departman Direktörü",
         link: "https://www.linkedin.com/in/mehmet-akif-duran-9a016024a/",
         image: "/images/team/Mehmet_Akif_Duran.png",
+      },
+      {
+        name: "Mehmet Tolga Çakan",
+        span: "Yazı İşleri Departman Direktörü",
+        link: "https://www.linkedin.com/in/tolga-%C3%A7akan-7aa399204/",
+        image: "/images/team/Mehmet_Tolga_Cakan.png",
       },
       {
         name: "Anılcan Çelikdel",
@@ -72,12 +78,6 @@ export const teamData = [
         span: "Medya Departmanı",
         link: "https://www.linkedin.com/in/yi%C4%9Fit-kaya-%C3%B6zkan-3b47271b7/",
         image: "/images/team/Yigit_Kaya_Ozkan.png",
-      },
-      {
-        name: "Ege Eyigüngör",
-        span: "Medya Departmanı",
-        link: "https://www.linkedin.com/in/ege-eyig%C3%BCng%C3%B6r-82b688228/",
-        image: "/images/team/Ege_Eyigungor.png",
       },
       {
         name: "Görkem Hasan Güvenç",
