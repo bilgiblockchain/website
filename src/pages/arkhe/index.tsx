@@ -30,7 +30,7 @@ export const ArkhePage: React.FC = () => {
         </Grid.Col>
         <Grid.Col md={5} span={12}>
           <Text ta="center">
-            Bu yaz sonuında, 28 Ağustos - 10 Eylül tarihleri arasında
+            Bu yaz sonunda, 28 Ağustos - 10 Eylül tarihleri arasında
             gerçekleşecek Arkhe Blockchain Week ile birlikte İzmir'in en güzel
             köylerinden Şirince'yi, adeta bir Blockchain köyüne dönüştüreceğiz.
             <br />
