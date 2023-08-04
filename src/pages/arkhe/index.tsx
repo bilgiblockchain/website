@@ -146,6 +146,7 @@ export const ArkhePage: React.FC = () => {
         </a>{" "}
         ulaşabilirler.
       </Text>
+      <br />
       <Text>
         Burs verme aşamasında{" "}
         <Text c="brand" fw={700} display={"inline"}>
