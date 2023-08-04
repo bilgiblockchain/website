@@ -8,15 +8,12 @@ import {
   Group,
   Text,
   Title,
-  Image,
-  AspectRatio,
   Kbd,
   Center,
   Stack,
 } from "@mantine/core";
 import { InfoGroup } from "../../components/infoGroup";
 import { Sponsors } from "../../components/sponsors";
-import { Carousel } from "@mantine/carousel";
 import { IconArrowNarrowRight, IconCheck, IconCopy } from "@tabler/icons";
 import { Camps } from "../../components/camps";
 import { useClipboard } from "@mantine/hooks";
@@ -131,6 +128,24 @@ export const ArkhePage: React.FC = () => {
           </Center>
         </Grid.Col>
       </Grid>
+      <Text>
+        Arkhe Blockchain Week'e gelmek isteyen ancak türlü nedenlerden dolayı bu
+        imkana erişemeyen{" "}
+        <Text c="brand" fw={700} display={"inline"}>
+          ihtiyaç sahibi
+        </Text>{" "}
+        öğrenciler, burs formuna{" "}
+        <a
+          href="https://forms.gle/wfAQAQTRW4f3ju6A6"
+          target="_blank"
+          style={{ textDecorationColor: "#77040D" }}
+        >
+          <Text c="brand" fw={700} display={"inline"}>
+            buradan
+          </Text>
+        </a>{" "}
+        ulaşabilirler.
+      </Text>
       <Text>
         Burs verme aşamasında{" "}
         <Text c="brand" fw={700} display={"inline"}>
