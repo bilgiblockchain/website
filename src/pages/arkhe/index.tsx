@@ -89,7 +89,7 @@ export const ArkhePage: React.FC = () => {
             </Text>
             <Text align="center" mt="-16px">
               <Text fw={700} c="brand" fz="4em" display={"inline"}>
-                2,2
+                2,7
               </Text>{" "}
               <Text fw={500} c="brand" display={"inline"}>
                 KİŞİ
@@ -146,6 +146,7 @@ export const ArkhePage: React.FC = () => {
         </a>{" "}
         ulaşabilirler.
       </Text>
+      <br />
       <Text>
         Burs verme aşamasında{" "}
         <Text c="brand" fw={700} display={"inline"}>
